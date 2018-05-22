@@ -3,7 +3,7 @@
 
 This repository contains all algorithms I have solved and all projects I have completed or am currently working on.
 
-The algorithms and projects are organized as follows:
+The algorithms and projects are organized as follows.
 
 Algorithms: 
   * Basic
