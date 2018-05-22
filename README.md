@@ -6,9 +6,9 @@ This repository contains all algorithms I have solved and all projects I have co
 The algorithms and projects are organized as follows:
 
 Algorithms: 
-    * Basic
-    * Intermediate
-    * Advanced
+  * Basic
+  * Intermediate
+  * Advanced
 
 Projects:
   * Front-End
