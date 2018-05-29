@@ -11,6 +11,7 @@ function chunkArrayInGroups(arr, size){
 
 chunkArrayInGroups([array], integer);
 
+
 //initial solution 5/13/18
 /*
 function chunkArrayInGroups(arr, size) {

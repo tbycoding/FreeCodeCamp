@@ -1,6 +1,15 @@
 /* **INSTRUCTIONS**
 Reverse the provided string */
 
+// solution 5/22/18 
+
+function reverseString(str) {
+  console.log(str.split("").reverse().join(""));
+}
+
+reverseString("string");
+
+
 // initial solution 5/12/18
 /*
 function reverseString(str) {
@@ -13,11 +22,3 @@ function reverseString(str) {
 
 reverseString("string");
 */
-
-// solution 5/22/18 
-
-function reverseString(str) {
-  console.log(str.split("").reverse().join(""));
-}
-
-reverseString("string");
