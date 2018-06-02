@@ -11,15 +11,16 @@
   <div id="bGround">
       <div class="wContainer">
         <div id='wCondition'>
+          <span id='locTime'></span><br>
           <span id="enterDate"></span><br>
-          <img id="icon" src=''><span id="temperature"></span><span id='currentMeasure'></span><button type='button' id='tempType'>Cels</button><br><span id='wDescription'></span>
+          <img id="icon"><span id="temperature"></span><span id='currentMeasure'></span><button id='tempType'>Cels<!--add type=button if not working--></button><br><span id='wDescription'></span>
           <br><span id='currentCity'></span><span id="currentState"></span><span id="currentCountry"></span> 
         </div>
         <div class="nextInfo">
-          <form><!--maybe add id to form if easier to style-->
-            <input id='enterInfo' type="text" value='Enter'>
-            <button id='getWeather'>Get Weather</button>
-          </form>
+          <!--add question mark image here...on hover say to input city/state if in use and give example and city/country if not in us and give example-->
+          <input id='enterInfo' type="text" placeholder=' city/state or city/country' name='newCity' required>
+          <button id='subLoc' type='submit'>Get Weather</button>
+          <p id='test'></p>
           <!-- /n form(enter city&state(US) or city&country), submit(button) - all one line -->
         </div>
     </div>
@@ -27,9 +28,8 @@
   
   
   <!-- <div id='demo'></div>
-  <footer>If in the US, enter city and state, if outside US, enter city and country</footer> -->
+  <footer>claim no copyrights, by tbycoding</footer> -->
 
-  <!-- <script type="text/javascript" src="/FrontEndProjects/Intermediate/02-Weather/weather.js"></script> -->
-  <script type='text/javascript' src='/FrontEndProjects/Intermediate/02-Weather/gps.js'></script>
+  <script type="text/javascript" src="/FrontEndProjects/Intermediate/02-Weather/weather.js"></script>
 </body>
 </html>
