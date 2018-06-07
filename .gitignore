@@ -1,13 +1,20 @@
-Other
+fccun.txt
 todo.txt
+/1-WebDesign
+/3-FrontEnd
+/4-DataVisualization
+/5-APIs-Microservice
+/6-InfoSecurity-QualityAssurance
+/7-Extra
+/8-FCCLegacy
 /FrontEndProjects/Basic/01-Tribute/Images/original
 /FrontEndProjects/Basic/01-Tribute/practice.js
 /FrontEndProjects/Basic/01-Tribute/tribute.css
 /FrontEndProjects/Basic/01-Tribute/tribute.html
 
-/Algorithms/Intermediate
 /FrontEndProjects/Intermediate/02-Weather/images/for_srcset
 /FrontEndProjects/Intermediate/02-Weather/gps1.js
+/FrontEndProjects/Intermediate/02-Weather/codes.json
 /FrontEndProjects/Intermediate/01-QuoteGenerator
 /FrontEndProjects/Intermediate/03-WikipediaViewer
 /FrontEndProjects/Intermediate/04-Twitch

@@ -32,6 +32,7 @@ function newWeather(){
 
   newWeather.onload = function(){
     if(this.status = 200){
+      //try changing info to just 'let info' instead of window
       window.info = JSON.parse(this.responseText);
       mainWeather();
     } //add "else" return error for 404 and/or 403
@@ -44,6 +45,7 @@ function mainWeather(){
   let cond = info.query.results.channel.item.condition;
   var d = new Date();
   let dt = info.query.results.channel.lastBuildDate;
+  console.log(dt);
   let cTime = dt.substring(17, 22);
   if(cTime[0] == 0){
     cTime = cTime.slice(1, cTime.length);
@@ -121,15 +123,16 @@ function mainWeather(){
   document.getElementById('temperature').innerHTML = cond.temp + '&deg;F';
   document.getElementById('tempType').addEventListener('click', celsFahr);
   //let toggleTemp = document.getElementById('tempType').innerHTML;
-  //^^try to fix/make it work with toggleTemp and change button to be "F/C&deg;" -- when doing this try to use <input> with type, value onclick
+  //^^try to fix/make it work with toggleTemp -- when doing this try to use <input> with type, value onclick
   function celsFahr(){
-    if(document.getElementById('tempType').innerHTML == 'Cels'){
+    if(document.getElementById('tempType').value == 'on'){
       document.getElementById('temperature').innerHTML = Math.round((cond.temp-32)*(5/9)) + '&deg;C';
-      document.getElementById('tempType').innerHTML = 'Fahr';
-      console.log(document.getElementById('tempType').innerHTML);
+      document.getElementById('tempType').innerHTML = '&deg;F';
+      document.getElementById('tempType').value = 'off';
       } else {
       document.getElementById('temperature').innerHTML = cond.temp + '&deg;F';
-      document.getElementById('tempType').innerHTML = 'Cels';
+      document.getElementById('tempType').innerHTML = '&deg;C';
+      document.getElementById('tempType').value = 'on';
       }
   }
 
