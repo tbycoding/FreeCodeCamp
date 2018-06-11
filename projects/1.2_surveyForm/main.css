@@ -1,0 +1,212 @@
+body{
+  margin: 0;
+  padding: 0; 
+  background-color: rgb(177, 177, 177);
+  position: relative;
+}
+.bGround{
+  height: 100vh;
+  width: 100vw;
+  margin: -1.5% 0 0 -3%;
+  padding: 0;
+  background-image: url('images/trebleClefG.svg');
+  background-size: 20.5%;
+  opacity: 0.6;
+  position: absolute;
+  /*background-repeat: no-repeat;*/
+}
+#title{
+  text-align: center;
+  margin: 18px;
+}
+.container{
+  width: 80%;
+  background: #fff;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
+  min-width: 300px;
+  padding: 10px;
+  
+}
+#description{
+  text-align: center;
+  font-size: 1.2em;
+  grid-area: 1/1/2/-1;
+}
+.personalInfo{
+  margin: 50px 10px 10px 30px;
+  align-items: top;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-columns: 100px 1fr 80px 1fr;
+  
+  grid-template-areas:
+  "nameL nameI ageL ageG"
+  "emailL emailI . ageG"
+  "countryL countryI genderL genderG"
+}
+#name-label{
+  grid-area: nameL;
+}
+#name{
+  grid-area: nameI;
+  height: 1.5em;
+  padding-left: 2px;
+}
+#email-label{
+  grid-area: emailL;
+}
+#email{
+  grid-area: emailI;
+  height: 1.5em;
+  padding-left: 2px;
+}
+#age{
+  grid-area: ageL;
+}
+.age{
+  grid-area: ageG;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px 1fr;
+  grid-template-rows: 33px 33px 33px;
+}
+input[name=age]{
+  cursor: pointer;
+}
+#origin{
+  grid-area: countryL;
+}
+#country{
+  grid-area: countryI;
+  height: 1.5em;
+  padding-left: 2px;
+}
+#gender{
+  grid-area: genderL;
+}
+.gender{
+  grid-area: genderG;
+  display: grid;
+  grid-template-columns: 22px 1fr 22px 1fr 22px 1fr;
+  padding-right: 50px;
+}
+#male, #female, #other{
+  cursor: pointer;
+}
+#name, #email, #country{
+  max-width: 200px;
+}
+hr{
+  margin: 20px;
+}
+.surveyQ{
+  align-items: center;
+  margin: 10px;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 25px;
+  grid-template-rows: repeat(4, 50px);
+  grid-template-columns: 1fr 1fr;
+}
+#number-label, #genre, #favInst, #favArt, #commentsL{
+  justify-self: end;
+}
+#commentsL{
+  align-self: end;
+}
+#number{
+  max-width: 140px;
+}
+#dropdown, #instrument{
+  max-width: 100px;
+}
+#artist{
+  max-width: 200px;
+}
+#comments{
+  max-width: 250px;
+}
+#submit{
+  cursor: pointer;
+  margin: 30px;
+  margin-left: 85%;
+  background: rgb(177, 177, 177);
+  border-radius: 5px;
+  color: rgb(0, 0, 0, 0.7)
+}
+#submit:hover{
+  color: rgb(0, 0, 0)
+}
+
+
+@media (max-width: 765px){
+  .bGround{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .personalInfo{
+    margin: 30px 10px 10px 10px;
+    grid-template-rows: repeat(6, 50px);
+    grid-template-columns: 1fr 1fr;
+  
+    grid-template-areas:
+    "nameL nameI"
+    "emailL emailI"
+    "ageL ageG"
+    ". ."
+    "countryL countryI"
+    "genderL genderG"
+  }
+  #name, #email, #country{
+    max-width: 220px;
+  }
+  #name-label, #email-label, #age, #origin, #gender{
+    justify-self: end;
+    padding-right: 50px;
+  }
+  #submit{margin-left: 50%;}
+}
+@media (max-width: 500px){
+  .personalInfo{
+    grid-template-columns: 120px 1fr;
+    grid-column-gap: 0;
+  }
+  #name-label, #email-label, #age, #origin, #gender{
+    justify-self: start;
+    padding-left: 5px;
+  }
+}
+@media (max-width: 400px){
+  #name, #email, #country{
+    max-width: 150px;
+  }
+}
+@media (min-width: 1000px){
+  .bGround{
+    background-size: 26%;
+  }
+}
+@media (max-width: 500px){
+  .bGround{
+    background-size: 25%;
+  }
+}
+
+
+
+
+
+
+.footer{
+  text-align: center;
+  bottom: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: black;
+  opacity: 1.0;
+}

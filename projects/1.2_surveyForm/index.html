@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Favorite Music</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="bGround">
+      <div class='footer'>tbycoding</div>
+  </div>
+  <h1 id="title">Music Questionnaire</h1>
+  <div class="container">
+    <p id="description">Please take a moment to describe what sounds move you.</p>
+    <form action="" id="survey-form">
+      <div class="personalInfo">
+        <label for="name" id='name-label'>* Name: </label>
+        <input required type="text" id="name" placeholder="Enter name.">
+        <label for="email" id='email-label'>* E-mail: </label>
+        <input required type="email" id='email' placeholder='Enter e-mail.'>
+        <label for="Age" id="age">* Age: </label>
+        <div class="age">
+          <input name="age" value='under 16' type="radio" id='under16' required>
+          <label name="ageL">under16</label>
+          <input name="age" value='17-25' type="radio" id='17-25'>
+          <label name="ageL">17-25</label>
+          <input name="age" value='26-35' type="radio" id='26-35'>
+          <label name="ageL">26-35</label>
+          <input name="age" value='36-45' type="radio" id='36-45'>
+          <label name="ageL">36-45</label>
+          <input name="age" value='56-55' type="radio" id='46-55'>
+          <label name="ageL">46-55</label>
+          <input name="age" value='over 55' type="radio" id='56plus'>
+          <label name="age">over56</label>
+        </div>
+        <label for="Country" id="origin">Country: </label>
+        <input type="text" id="country" placeholder='Enter country.'>
+        <label for="gender" id='gender'>Gender: </label>
+        <div class="gender" id="check-gender">
+          <input value='male' type="checkbox" id="male">
+          <label id="gmale">M</label>
+          <input value='female' type="checkbox" id="female">
+          <label id="gfemale">F</label>
+          <input value='other' type="checkbox" id="other">
+          <label id="gother">Other</label>
+        </div>
+      </div>  
+      <hr>
+      <div class="surveyQ">
+        <label for="genre" id="genre">Favorite Genre: </label>
+        <select name="genre" id="dropdown">
+          <option value="electric">Electric</option>
+          <option value="country">Country</option>
+          <option value="jazz">Jazz</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="rap">Rap</option>
+          <option value="classical">Classical</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="instrument" id='favInst'>Favorite Instruments: </label>
+        <select name="instrument" id="instrument">
+          <option value="strings">Strings</option>
+          <option value="brass">Brass</option>
+          <option value="woodwind">Woodwind</option>
+          <option value="percussion">Percussion</option>
+          <option value="keyboard">Keyboard</option>
+          <option value="computer generated">Computer</option>
+          <option value="no clue">What's that?</option>
+        </select>
+        <label for="artist" id='favArt'>Favorite Artist: </label>
+        <input type="text" id="artist" placeholder="Enter favorite artist.">
+        <label for="schedule" id='number-label'>Listening frequency: </label>
+        <input type="number" id="number" placeholder='Enter days per week.' min='0' max='7'>
+        <label id='commentsL' for="comments">Comments: </label>
+        <textarea name="comments" id="comments" cols="30" rows="5" placeholder='Enter any comments.'></textarea>
+      </div>
+        <button type='submit' id="submit">Submit</button>
+    </form>
+  </div>
+
+  
+  <script type='text/javascript' src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script> 
+</body>
+
+</html>

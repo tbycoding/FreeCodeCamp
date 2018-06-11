@@ -1,4 +1,0 @@
-/* **INSTRUCTIONS**
-*/
-
-// initial solution
