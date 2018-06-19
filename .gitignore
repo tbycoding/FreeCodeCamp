@@ -1,3 +1,4 @@
+test*
 fccun.txt
 todo.txt
 /1-WebDesign
@@ -7,20 +8,8 @@ todo.txt
 /6-InfoSecurity-QualityAssurance
 /7-Extra
 /8-FCCLegacy
-/FrontEndProjects/Basic/01-Tribute/Images/original
-/FrontEndProjects/Basic/01-Tribute/practice.js
-/FrontEndProjects/Basic/01-Tribute/tribute.css
-/FrontEndProjects/Basic/01-Tribute/tribute.html
-
-/FrontEndProjects/Intermediate/02-Weather/images/for_srcset
-/FrontEndProjects/Intermediate/02-Weather/gps1.js
-/FrontEndProjects/Intermediate/02-Weather/codes.json
-/FrontEndProjects/Intermediate/01-QuoteGenerator
-/FrontEndProjects/Intermediate/03-WikipediaViewer
-/FrontEndProjects/Intermediate/04-Twitch
-/FrontEndProjects/Advanced
-/FrontEndProjects/Basic/02-Portfolio
+/FrontEndProjects/*
+!02-Weather
 
 /algorithms
 /projects/1.1_tributePage/images/original
-/projects/1.2_surveyForm/indextest.html

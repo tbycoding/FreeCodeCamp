@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Docs</title>
+  <link rel="stylesheet" href="main.css" type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav id='navbar'>
+    <a href='#home' class='home'><header id="logo"><span id="logo-large">jQuery</span><span id="logo-small">docs</span></header></a>
+    
+    <div id="navlist">
+      <ul>
+        <a href="#Overview" class="nav-link" id='active'>
+          <li id='navtext'>Overview</li>
+        </a>
+        <a href="#Document_Loading" class="nav-link">
+          <li id='navtext'>Document Loading</li>
+        </a>
+        <a href="#jQuery_Object" class="nav-link">
+          <li id='navtext'>jQuery Object</li>
+        </a>
+        <!--<a href='#$_vs_$()' class="nav-link">
+          <li id='navtext'>$ vs $()</li>
+        </a>-->
+        <a href="#Handler_Attachments" class="nav-link">
+          <li id='navtext'>Handler Attachments</li> <!--maybe title 'Handlers' or 'Attachments'-->
+        </a>
+        <a href="#Events" class="nav-link">
+          <li id='navtext'>Events</li>
+        </a>
+        <a href="#DOM_Manipulation" class="nav-link">
+          <li id='navtext'>DOM Manipulation</li>
+        </a>
+        <a href="#Style_Properties" class="nav-link">
+          <li id='navtext'>Style Properties</li>
+        </a>
+        <a href="#Effects" class="nav-link">
+          <li id='navtext'>Effects</li>
+        </a>
+        <a href="#Traversing" class="nav-link">
+          <li id='navtext'>Traversing</li>
+        </a>
+        <!--
+        <a href='#.click()' class="nav-link">
+          <li id='navtext'>.click()</li>
+        </a>
+        <a href="#scroll" class="nav-link">
+          <li id='navtext'>scroll</li>
+        </a>
+        <a href="#scrollTop" class="nav-link">
+          <li id='navtext'>scrollTop</li>
+        </a>
+        <a href="#each" class="nav-link">
+          <li id='navtext'>each</li>
+        </a>
+        <a href="#offset" class="nav-link">
+          <li id='navtext'>offset</li>
+        </a>
+        <a href="#position" class="nav-link">
+          <li id='navtext'>position</li>
+        </a>
+        <a href="#Filtering" class="nav-link">
+          <li id='navtext'>Filtering</li>
+        </a>
+        <a href="#Tree_Traversal" class="nav-link">
+          <li id='navtext'>Tree Traversal</li>
+        </a>
+        <a href="#Class_Attribute" class="nav-link">
+          <li id='navtext'>Class Attribute</li>
+        </a> 
+        -->
+      </ul>
+    </div>
+  </nav>
+  
+  
+  <div id="home"></div>
+  <main id="main-doc">
+    
+    <section class="main-section" id='Overview'>
+      <header><h2>Overview</h2></header>
+      <p>jQuery is a JavaScript library that is meant to improve proficiency in writing JavaScript code. This assumes at least a basic understand of JavaScript as well as HTML and CSS before using jQuery. If you are completely new to JavaScript, visit <a href="https://www.freecodecamp.org/" target='_blank'> FreeCodeCamp</a> and follow their course on the language. Another great resource is <a href="https://eloquentjavascript.net" target='_blank'>Eloquent&nbsp;JavaScript</a>, a book written by Marjin Haverbeke.</p>
+      <p>This documentation page will highlight the <!--find a better way to describe these-->events, methods, and functions used to create the navigation bar that you see to the left or above. The syntax and information used originates from and relies heavily on the api documentation at <a  href="https://jquery.com/" target='_blank'>jquery.com</a>.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Document_Loading">
+      <header><h2>Document Loading</h2></header>
+      <p>To perform actions on a pages DOM (Document Object Model), the page must be loaded before any objects can be accessed, as in <code>document.onload</code> in JavaScript. In jQuery, this is done by using <code>$(document).ready()</code>. However, jQuery has a few benefits in that it does not necessarily need the document to be loaded, but only the elements that will be accessed. In JavaScript, functions wait for the entire document to load including images and all other contents, and if called before the window is loaded, the handlers will not be executed. With the <code>.ready()</code> element, jQuery can still access the elements needed and perform the called functions once those elements are loaded.</p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+             1
+             2
+             3</pre>
+          <pre class='code'>
+            $(<span id='docBlue'>document</span>).ready(<span id='docBoldBlue'>function</span>(){
+              <span id='codeComments'>// Handler for .ready() called.</span>
+            });</pre>
+        </div>
+      </div>
+      <p>The syntax above is the currently recommended way of using <code>.ready()</code> and is usually used with an anonymous function as shown. The following is it's equivalent.</p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+             1
+             2
+             3</pre>
+          <pre class='code'>
+            $(<span id='docBoldBlue'>function</span>(){
+              <span id='codeComments'>// Handler for .ready() called.</span>
+            });</pre>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="main-section" id="jQuery_Object">
+      <header><h2>jQuery Object</h2></header>
+      <p>jQuery objects are a collection of DOM elements that are presented in a way that is very similar to an array. A jQuery object can be just one element, such as a <code><span id='blue'>&#60;</span>p&#62; 0</code></p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+             1
+             2
+             3</pre>
+          <pre class='code'>
+            $(<span id="tagRed">'</span>{
+              color: red; alskdjf ;alskdf a;lskf al asd asd 
+            }</pre>
+        </div>
+      </div>
+      <!--go into accessing elements, how jQ object is structured similarly to an array while holding all of the elements attributes, and entertain this and $(this)-->
+    </section>
+    <!--<hr>
+    <section class="main-section" id='$_vs_$()'>
+      <header><h2>$ vs $()</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>-->
+    <hr>
+    <section class="main-section" id="Handler_Attachments"> <!--maybe title 'Handlers' or 'Attachments'-->
+      <header><h2>Handler Attachments</h2></header>
+      <p>Of the many Event Handler Attachments available in jQuery, the seemingly most important and universal method is <code>.on()</code> which has replaced <code>.bind()</code>, <code>.delegate()</code>, and <code>.live()</code>. This method most commonly attaches an event to a handler. jQuery will pass through the browser's standard JavaScript event types, calling the handler function when the browser generates events due to the user's action.</p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+              1
+              2
+              3</pre>
+          <pre class='code'>
+            $(<span id='tagRed'>'button'</span>).on(<span id='tagRed'>'click'</span>, <span id='docBoldBlue'>function</span>(){
+              <span id='codeComments'>// Make the button do something crazy.</span>
+            });</pre>
+        </div>
+      </div>
+      <p>The events attached to <code>.on()</code> can be manually triggered instead of a user action by using <code>.trigger()</code> and the events attached can also be removed by using <code>.off()</code>.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Events">
+      <header><h2>Events</h2></header>
+      <p>There are multiple events to be covered, including the document loading event from above. This page will focus on:</p>
+      <ul>
+        <li>Mouse Events</li>
+        <li>Browser Events</li>
+      </ul>
+      <p>Mouse events are <code>click</code> events that are called with a shortcut to the <code>.on('click', handler)</code> method. To use this in the same way as in <code>.on()</code> method:</p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+              1
+              2
+              3</pre>
+          <pre class='code'>
+            $(<span id='tagRed'>'button'</span>).click(<span id='docBoldBlue'>function</span>(){
+              <span id='codeComments'>// Make the button do something crazy.</span>
+            });</pre>
+        </div>
+      </div>
+      <p>For this event to occur, the mouse button must be depressed and released while the pointer is inside the targeted element. It is also important to note that as this is a shorthand for <code>.on('click', handler)</code> and can also be triggered in the same way. It can be detached by using <code>.off('click)</code>.</p>
+      <p>The Browser event <code>.scroll()</code> is the second method to be discussed. This method is also a shortcut and can be used by <code>.on('scroll', handler)</code>. This also means that it can be triggered and detached in the same way.</p>
+      <div class='code-block-wrap'>
+        <div class="code-block">
+          <pre class="margin">
+              1
+              2
+              3</pre>
+          <pre class='code'>
+            $(<span id='docBlue'>document</span>).scroll(<span id='docBoldBlue'>function</span>(){
+              <span id='functionPurple'>console</span>.log(<span id='tagRed'>'You just scrolled!'</span>);
+            });</pre>
+        </div>
+      </div>
+      <p>This code will log to the console the string "You just scrolled!" every time the window moves. The <code>.scroll()</code> method will happen whenever the element's scroll position changes be it from a mouse click or drag on the scroll bar, dragging inside the element, pressing arrow keys, or using the mouse wheel.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="DOM_Manipulation">
+      <header><h2>DOM Manipulation</h2></header>
+      <p>There are many ways to manipulate the DOM using jQuery. The following are the methods that will be covered:</p>
+      <ul>
+        <li>Attributes</li>
+        <li>Removal</li>
+        <li>Insertion</li>
+        <li>Copying</li>
+      </ul>
+      <p></p>
+    </section>
+    <hr>
+    <section class="main-section" id="Style_Properties">
+      <header><h2>Style Properties</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Effects">
+      <header><h2>Effects</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Traversing">
+      <header><h2>Traversing</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    
+    <!--
+    <hr>
+    <section class="main-section" id='.click()'>
+      <header><h2>.click()</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="scroll">
+      <header><h2>scroll</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="scrollTop">
+      <header><h2>scrollTop</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="each">
+      <header><h2>each</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="offset">
+      <header><h2>offset</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="position">
+      <header><h2>position</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Filtering">
+      <header><h2>Filtering</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Tree_Traversal">
+      <header><h2>Tree Traversal</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Class_Attribute">
+      <header><h2>Class Attribute</h2></header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat accusamus aliquam ullam nam nemo quis magni, vel, illum numquam natus assumenda consectetur saepe explicabo nobis quia obcaecati! Itaque rerum consectetur repellat, reprehenderit ullam possimus iure velit necessitatibus nostrum cum laudantium rem? Laudantium eligendi odit nemo incidunt, officia, quod, nesciunt neque a natus cumque deleniti nihil vitae qui corporis earum iusto accusamus corrupti vero expedita. Culpa architecto, sapiente praesentium quaerat cumque expedita molestias harum, neque porro recusandae earum repellendus doloribus quasi obcaecati natus aliquam vitae iure perferendis impedit modi fuga eos accusamus quas blanditiis. Iure provident quisquam minima odit tempore.</p>
+    </section>
+    -->
+  </main>
+
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' type='text/javascript'></script>
+  <script src='main.js' type='text/javascript'></script>
+  <!--<script src='testmainIrrExp.js' type='text/javascript'></script>-->
+</body>
+<footer><p id='footer'>Page by tbycoding</p></footer>
+</html>

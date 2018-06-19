@@ -1,0 +1,283 @@
+html, body{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  min-width: 275px;
+}
+#navbar{
+  position: fixed;
+  width: 250px;
+  top: 0;
+  left: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #fff;
+}
+#logo{
+  text-align: center;
+  height: 90px;
+  /*line-height: 90px; -- makes text center vertically but looks better without */
+  color: hsl(240, 100%, 50%);
+  border: 2px solid hsl(240, 100%, 50%);
+}
+#logo-large{font-size: 40px;}
+#logo-small{font-size: 16px;}
+#navlist{
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 94px;
+  bottom: -24px;
+  position: fixed;
+}
+::-webkit-scrollbar{
+  height: 7px;
+  width: 3px;
+  background: transparent;
+}
+.code-block::-webkit-scrollbar-thumb:horizontal{
+  background: hsla(240, 100%, 60%);
+}
+::-webkit-scrollbar-thumb{
+  background: hsl(240, 100%, 50%);
+}
+#navbar ul{
+  margin-top: 0;
+  margin-left: -40px;
+  width: 250px;
+}
+#navtext{
+  text-decoration: none;
+}
+#navbar a{
+  text-decoration: none;
+}
+#navbar li{
+  border: 2px solid hsl(240, 100%, 50%);
+  border-top: 0.5px solid #fff;
+  height: 50px;
+  line-height: 50px;
+  background-color: hsl(240, 100%, 50%);
+  color: #fff;
+  position: relative;
+  list-style-type: none;
+  padding-left: 8px;
+  margin-left: 0;
+}
+#navbar a#active li{
+  background-color: #fff;
+  color: hsl(240, 100%, 50%);
+  border-top: 0.5px solid hsl(240, 100%, 50%);
+}
+#navbar li:hover{
+  background-color: #fff;
+  color: hsl(240, 100%, 50%);
+}
+#navbar a#active li:after{
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid hsl(240, 100%, 50%);
+  /*background-color: hsl(240, 100%, 50%);*/
+  left: 236px;
+  position: absolute;
+  /*transform: rotate(45deg);*/
+  bottom: 20px;
+}
+
+.home{
+  cursor: default;
+}
+#home{
+  position: absolute;
+  top: -50px;
+  background: transparent;
+  height: 0;
+  width: 0;
+}
+
+#main-doc{
+  margin: 15px 10px 30px 265px;
+  position: relative;
+  /*scroll-behavior: smooth;*/
+  overflow: auto;
+  display: block;
+}
+.main-section{
+  width: 100%;
+  max-width: 750px; /* maybe make this 700px */
+  margin: auto;
+
+}
+code{
+  font-family: monospace, 'Courier New', 'Courier';
+  background-color: rgb(230, 230, 230);
+  font-size: 14px;
+  color: #222222;
+}
+.code-block-wrap{
+  padding-left: 30px;
+  margin: 0;
+  width: 75%;
+  min-width: 360px;
+}
+.code-block{
+  display: flex;
+  background-color: rgb(230, 230, 230);
+  overflow: auto;
+  color: #080808;
+}
+/*.code-block::-webkit-scrollbar{
+  width: 3px;
+  background: transparent;
+}*/
+pre.margin{
+  /*display: inline-block;*/
+  border-right: 2px solid rgb(128, 128, 128);
+  padding-right: 10px;
+  margin-left: -70px;
+}
+pre.code{
+  /*display: inline;*/
+  margin-left: -70px;
+}
+#docBlue{
+color: #000080;
+}
+#docBoldBlue{
+  color: #000080;
+  font-weight: 700;
+}
+#codeComments{
+  color: #007700;
+}
+#tagRed{
+  color: #800000; /*maybe more magenta*/
+}
+#eventGray{
+  color: #808080;
+}
+#functionPurple{
+  color: #af00db; /*maybe darker purple*/
+}
+/*
+#docLightBlue{
+  color: #2c9ee0;
+  }
+  */
+.main-section p a{
+  text-decoration: none;
+  color: hsl(240, 100%, 50%);
+}
+hr{
+  margin: 40px auto 30px auto;
+  border: .5px solid hsl(240, 100%, 50%);
+  max-width: 800px;
+}
+
+#navbar a#active.stickyTop{
+  top: 94px;
+  position: fixed;
+  z-index: 10;
+  width: 250px;
+}
+#navbar a#active.stickyBot{
+  /*top: calc(100vh - 52.5px);*/
+  bottom: 0;
+  position: fixed;
+  z-index: 10;
+  width: 250px;
+}
+footer{
+  position: relative;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  z-index: -1;
+}
+#footer{
+  background-color: hsl(240, 100%, 50%);
+  color: #fff;
+  width: 200px;
+  height: 100%;
+  line-height: 25px;
+  position: relative;
+  margin: auto;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+/* maybe make logo 50px height and navbar tall enough for one more li element if no scrollbar is wanted...otherwise when mouse scroll it skips some */
+@media (max-width: 770px){
+  #navbar{
+    width: 100%;
+    height: 191px;
+    border-bottom: 2px solid hsl(240, 100%, 50%);
+    z-index: 5;
+  }
+  #logo{
+    margin: auto;
+    height: 70px;
+    line-height: 70px;
+    padding-bottom: 5px;
+    max-width: 500px;
+  }
+  #logo-large{font-size: 35px;}
+  #logo-small{font-size: 14px;}
+  #navlist{
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 100%;
+    /*box-sizing: content-box; -- use this to hide scrollbar, but then when scrolling on mouse it skips because of sticky...maybe make it taller but then might take up too much of screen ...actually probably not needed if make webkit 0width */
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 79px;
+    margin: 0 auto;
+    max-width: 504px;
+    height: 112.5px;
+    bottom: 0;
+    padding: 0;
+  }
+  #navbar ul{
+    margin-top: 0;;
+    /*margin-left: -40px;*/
+    width: 100%;
+    max-width: 504px;
+    height: 317px;
+  }
+  #navbar li{
+    height: 35px;
+    line-height: 28px;
+    text-align: center;
+  }
+  
+  #navbar a#active.stickyTop{
+    top: 79px;
+    position: fixed;
+    width: calc(100vw - 6px);
+    max-width: 501px;
+  }
+  #navbar a#active.stickyBot{
+    /*top: calc(100vh - 52.5px);*/
+    bottom: 0;
+    position: fixed;
+    width: calc(100vw - 6px);
+    max-width: 501px;
+  }
+  #main-doc{
+    margin: 200px 15px 30px 15px;
+  }
+  .code-block-wrap{
+    min-width: 230px;
+  }
+  #navbar a#active li:after{
+    display: none;
+  }
+}
