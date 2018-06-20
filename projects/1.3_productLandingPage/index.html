@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="main.css" type='text/css'>
+  <script type='text/javascript' src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</head>
+<body>
+  <header id='header'>
+    <nav id='nav-bar'>
+      <div class="logo-name">
+        <a href='#about'>
+        <img src="images/notebookLogoRedWhite.svg" alt="Coding Bootcamp Logo" id='header-img'>
+      
+        <span id='company-name'>Coding Bootcamp</span>
+      </a>
+      </div>
+      <ul id='nav-list'>
+        <li class='about active'><a class="nav-link" href="#about">About</a></li>
+        <li class='pricing'><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class='sign-up'><a class="nav-link" href="#sign-up">Sign-Up</a></li>
+        
+      </ul>
+      <div class="menu-bars">
+        <img id='menuBars' src="images/menuLines_3_White.svg" alt="Navigation Menu" onmouseover="this.src='images/menuLines_3_Hover.svg'" onmouseout="this.src='images/menuLines_3_White.svg'">
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class='content' id="about">
+      <div class="sub-content">
+        <div class="intro-content">
+          <h2 class='intro-header'>Learn - </h2>
+          <p class='intro-desc'>To be a full stack devloper by learning the fundamentals of computer science concepts and go in depth into programming languages under the supervision and instruction of the best the industry has to offer.</p>
+        </div>
+        <div class="intro-content">
+          <h2 class='intro-header'>Grow - </h2>
+          <p class='intro-desc'>Into the developer you want to be.</p>
+        </div>
+        <div class="intro-content">
+          <h2 class='intro-header'>Connect - </h2>
+          <p class='intro-desc'>With the top companies in the development industry on the back of our outstanding position and reputation.</p>
+        </div>
+        <div class="intro-content">
+          <h2 class='intro-header'>Achieve - </h2>
+          <p class='intro-desc'>Your dream of becoming a developer!</p>
+        </div>
+      </div>
+      
+      <video src="video/Pexels_Videos_4761.mp4" id='video' type='video/mp4' controls></video>
+    </div>
+    <div class='content' id="pricing">
+      <div class="pricing-box">
+        <h2 class="pricing-header">Normal</h2>
+        <hr>
+        <div class="subscription-details">
+          <p>6 Months of Training</p>
+          <p>High-Tech Equipment</p>
+          <p>Top Quality Education</p>
+        </div>
+        <div class="cost">
+            <span id='cost'>$5,000</span>
+        </div>
+      </div>
+      <div class="pricing-box">
+        <h2 class="pricing-header">One-on-One</h2>
+        <hr>
+        <div class="subscription-details">
+          <p>Normal Subscription</p>
+          <p>Follow-Up Training for<br>6 Months</p>
+          <p>-2 Hours Per Week-</p>
+        </div>
+        <div class="cost">
+            <span id='cost'>$7,500</span>
+        </div>
+      </div>
+      <div class="pricing-box">
+        <h2 class="pricing-header">Job Placement</h2>
+        <hr>
+        <div class="subscription-details">
+          <p>Normal + One-on-One Until Job Placement</p>
+          <p>Interview Prep</p>
+          <p>Guaranteed Job Placement</p>
+        </div>
+        <div class="cost">
+            <span id='cost'>$10,000</span>
+        </div>
+      </div>
+    </div>
+    <div class='content' id="sign-up">
+      <form action="https://www.freecodecamp.com/email-submit" id='form'>
+        <div class="email-container">
+          <h2 id='apply'>Sign up and Apply</h2>
+          <input required name='email' type="email" id="email" placeholder='Enter E-mail.'>
+      </div>
+        <input type="submit" class="" id="submit" value='Sign-Up'>
+      </form>
+    </div>
+    <div class='footer'>
+      <div class="footer-content">
+        <span>This is a fake company. Video source from <a href='https://videos.pexels.com/videos/person-on-using-a-computer-857553' id='pexels' alt='PexelsVideo.com'><u>PexelsVideo</u></a>.</span>
+        <br>
+        <span>Page by tbycoding</span>
+      </div>
+    </div>
+  </main>
+</body>
+
+
+</html>

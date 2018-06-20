@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0; 
-  background-color: rgb(177, 177, 177);
+  background-color: rgb(134, 198, 218);
   position: relative;
 }
 .bGround{
@@ -21,7 +21,7 @@ body{
 }
 .container{
   width: 80%;
-  background: #fff;
+  background: rgb(255, 255, 255);
   margin: auto;
   position: relative;
   max-width: 800px;
@@ -98,13 +98,14 @@ hr{margin: 20px;}
   padding-left: 2px;
 }
 #number-label, #genre, #favInst, #favArt, #commentsL{
-justify-self: end;
+  justify-self: end;
 }
 #commentsL{align-self: end;}
 #number{max-width: 140px;}
 #dropdown, #instrument{max-width: 100px;}
 #artist{max-width: 200px;}
 #comments{max-width: 250px;}
+.submit{text-align: center;}
 #submit{
   cursor: pointer;
   margin: 30px;
@@ -114,7 +115,15 @@ justify-self: end;
   color: rgb(0, 0, 0, 0.7)
 }
 #submit:hover{color: rgb(0, 0, 0)}
-
+.footer{
+  text-align: center;
+  bottom: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: rgb(20, 20, 20);
+  opacity: 1.0;
+}
 
 @media (max-width: 765px){
   .bGround{
@@ -140,7 +149,7 @@ justify-self: end;
     justify-self: end;
     padding-right: 50px;
   }
-  .submit{text-align: center;}
+  
   #submit{margin: 20px auto 10px auto;}
 }
 @media (max-width: 500px){
@@ -161,14 +170,4 @@ justify-self: end;
 }
 @media (max-width: 500px){
   .bGround{background-size: 25%;}
-}
-
-.footer{
-  text-align: center;
-  bottom: 5px;
-  position: absolute;
-  right: 0;
-  left: 0;
-  color: black;
-  opacity: 1.0;
 }

@@ -1,0 +1,295 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(61, 18, 18);
+  overflow: auto;
+  
+}
+/*this allows scrollbar positioning*/
+/*
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  margin: 100px 0 0 0;
+}
+*/
+#header{
+  position: fixed;
+  height: 100px;
+  width: calc(100% - 20px);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgb(24, 24, 24);
+  z-index: 10;
+  box-shadow: 0px 1px 5px 3px #000;
+}
+#nav-bar{
+  display: flex;
+  max-width: 800px;
+  margin: auto;  
+}
+.logo-name{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  font-size: 28px;
+  font-weight: 750;
+  margin-left: 20px;
+}
+nav .logo-name a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: default;
+}
+#header-img{
+  height: 100px;
+  width: 100px;
+}
+#nav-list{
+  display: flex;
+  justify-content: flex-end;
+  flex: 40%;
+  font-size: 22px;
+  margin-right: 20px;
+}
+nav ul li{
+  list-style: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 33%;
+  justify-content: center;
+  border-left: 1px solid #fff;
+}
+.sign-up{
+  border-right: 1px solid #fff;
+}
+nav ul li a{
+  height: 90%;
+  width: 90%;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin: auto;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+nav ul li a:hover{
+  background-color: rgb(61, 18, 18);
+}
+nav ul li.active a{
+  background: #fff;
+  color: rgb(61, 18, 18);
+}
+#menuBars{
+  height: 100px;
+  display: none;
+  cursor: pointer;
+  right: 0;
+  width: 100px;
+}
+
+::-webkit-scrollbar{
+  height: 10px;
+  width: 10px;
+  background: rgb(61, 18, 18);
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(24, 24, 24);
+}
+
+main{
+  position: relative;
+  top: 100px;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+  font-size: 20px;
+}
+.content{
+  width: 90%;
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .content .sub-content{
+  margin: auto;
+  width: 100%;
+  background-color: rgb(24, 24, 24);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 3px #000;
+  color: #fff;
+  padding: 0 15px;
+}
+.intro-content{
+  margin: 15px;
+}
+h2.intro-header, h2.pricing-header, h2#apply{
+  text-shadow: 3px 3px #000;
+}
+h2.intro-header{
+  margin: 0;
+  display: inline-block;
+  clear: left;
+}
+p.intro-desc{
+  margin: 0px;
+  display: inline;
+}
+#video{
+  max-height: 281px;
+  max-width: 500px;
+  width: 90%;
+  display: absolute;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  box-shadow: 1px 1px 5px 3px #000;
+}
+#pricing{
+  justify-content: center;
+  
+}
+.pricing-box{
+  height: 300px;
+  width: 30%;
+  min-width: 190px;
+  margin: 10px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 3px #000;
+  color: #fff;
+  text-align: center;
+}
+hr{
+  width: 90%;
+  box-shadow: 0 0 2px 2px #000;
+}
+.subscription-details{
+  margin-top: 25px;
+  height: 155px;
+}
+#cost{
+  font-size: 22px;
+  border-bottom: 2px solid #fff;
+}
+#cost u{
+  margin-top: 20px;
+}
+#form{
+  margin: auto;
+  text-align: center;
+}
+.email-container{
+  height: 100px;
+  background: rgb(24, 24, 24);
+  margin: 20px auto 10px auto;
+  padding: 0 10px 0 10px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 3px #000;
+}
+h2#apply{
+  margin-top: 5px;
+}
+#email, #submit{
+  outline: none;
+}
+#submit{
+  left: 0;
+  right: 0;
+  background: rgb(24, 24, 24);
+  color: #fff;
+  padding: 3px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#submit:hover{
+  color: rgb(61, 18, 18);
+  background: #fff;
+}
+
+
+
+.footer{
+  width: calc(100% - 20px);
+  position: relative;
+  bottom: -30px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(24, 24, 24);
+  color: #fff;
+  left: 10px;
+  box-shadow: 0px -1px 5px 3px #000;
+}
+.footer-content{
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+#pexels{
+  text-decoration: none;
+  color: #fff;
+}
+
+@media only screen and (max-width: 755px) {
+  .logo-name{
+    flex: auto;
+  }
+  #menuBars{
+    display: inline-block;
+  }
+  /* if menu bars clicked and width <= 520, company-name display none*/
+  /*maybe give menubars standard width like 850px for mobiles then a query for menu display stacked or not...allow for menu to be inline if on mobile and above a certain width*/
+  #nav-list{display: none;}
+  #nav-list{
+    flex-flow: wrap;
+    flex: 1;
+    margin-top: 0;
+  }
+  nav ul li{
+    width: 100px;
+    height: 33px;
+    justify-content: flex-end;
+    border: none;
+  }
+  .sign-up{
+    border: none;
+  }
+  nav ul li:hover{
+    border-right: 2px solid #fff;
+  }
+  nav ul li#sign-up:hover{
+    border-right: 2px solid #fff;
+  }
+  nav ul li a{
+    width: auto;
+    text-align: right;
+    line-height: 33px;
+    margin: 0;
+    right: 0;
+  }
+  nav ul li a:hover{
+    background-color: transparent;
+  }
+  nav ul li.active a{
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #company-name{
+    display: none;
+  }
+}
